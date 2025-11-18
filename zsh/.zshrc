@@ -13,11 +13,11 @@ plugins=(git docker npm pep8 pip pyenv systemd zsh-autosuggestions zsh-syntax-hi
 source $ZSH/oh-my-zsh.sh
 
 # Load default config files (like Omarchy)
-source ~/dotfiles/zsh/.config/zsh/shell
-source ~/dotfiles/zsh/.config/zsh/aliases
-source ~/dotfiles/zsh/.config/zsh/functions
-source ~/dotfiles/zsh/.config/zsh/envs
-source ~/dotfiles/zsh/.config/zsh/init
+source ~/.config/zsh/shell
+source ~/.config/zsh/aliases
+source ~/.config/zsh/functions
+source ~/.config/zsh/envs
+source ~/.config/zsh/init
 
 # Persona overrides
 # aliases
