@@ -9,8 +9,11 @@ sudo apt install -y git curl wget ca-certificates zsh stow unzip
 
 # Neovim (latest unstable)
 if ! command_exists nvim; then
-  echo "Installing latest Neovim..."
-  sudo add-apt-repository -y ppa:neovim-ppa/unstable
+  echo "Installing latest Neovim from PPA..."
+  sudo apt install -y gnupg
+  sudo mkdir -p /etc/apt/keyrings
+  curl -fsSL https://keyserver.ubuntu.com/pks/lookup?op=get\&search=0x14FAA307353409A9 | sudo gpg --dearmor -o /etc/apt/keyrings/neovim.gpg
+  echo "deb [signed-by=/etc/apt/keyrings/neovim.gpg] http://ppa.launchpad.net/neovim-ppa/unstable/ubuntu jammy main" | sudo tee /etc/apt/sources.list.d/neovim.list
   sudo apt update
   sudo apt install -y neovim
 fi
