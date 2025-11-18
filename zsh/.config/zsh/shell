@@ -1,0 +1,10 @@
+# History control
+HISTSIZE=32768
+SAVEHIST="${HISTSIZE}"
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_FIND_NO_DUPS
+setopt SHARE_HISTORY
+
+# Case-insensitive completion
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-Z}'
+
